@@ -1,0 +1,116 @@
+/* 创建左右浮动工具类和清除浮动工具类 */
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* 图标 */
+.icon {
+	/* 控制图标大小 */
+	width: 35px;
+	height: 35px;
+	/* 图标和文字相邻时，垂直对齐 */
+	vertical-align: -0.15em;
+	/* 通过设置 color 来改变 SVG 的颜色/fill */
+	fill: currentColor;
+	/* path 和 stroke 溢出 viewBox 部分在 IE 下会显示，normalize.css 中也包含这行 */
+	overflow: hidden;
+}
+
+/* 时间 */
+.time {
+	/* 固定位置 */
+	position: fixed;
+	top: 4%;
+	left: 4%;
+}
+
+/* 旋转播放 */
+.rotate {
+	/* 固定位置 */
+	position: fixed;
+	top: 4%;
+	right: 4%;
+}
+
+@-webkit-keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.weather-wrap {
+	width: 300px;
+	padding: 40px 30px;
+	background-color: antiquewhite;
+	border-radius: 20px;
+	font-size: 14px;
+	color: #21206a;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* 50%为自身尺寸的一半 */
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.info {
+	margin-bottom: 30px;
+}
+
+.info p {
+	margin-bottom: 18px;
+}
+
+.temp {
+	margin-right: 10px;
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+.area {
+	margin: 16px 0 0 30px;
+	font-size: 24px;
+	color: #a1a1a1;
+}
+
+.weatherImg {
+	width: 100px;
+	height: 100px;
+	margin-top: 5px;
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+.item {
+	width: 33.33%;
+	padding: 10px 0;
+	text-align: center;
+	font-size: 16px;
+}
+
+.item img {
+	width: 30px;
+}
+
+.item p {
+	margin-top: 6px;
+}

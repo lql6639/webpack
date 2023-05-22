@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="liqinglin" />
+		<meta name="description" content="Weather component" />
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<link id="favicon" rel="shortcut icon" type="image/x-icon" href="" />
+		<title>天气</title>
+	</head>
+	<body>
+		<!-- 时间 -->
+		<div class="time" id="time">
+			<svg class="icon" aria-hidden="true">
+				<use xlink:href="#icon-shijian"></use>
+			</svg>
+		</div>
+		<!-- 旋转播放 -->
+		<div class="rotate" id="rotate">
+			<svg class="icon" aria-hidden="true">
+				<use xlink:href="#icon-a-yinlegedanyinfu"></use>
+			</svg>
+			<audio id="music" class="music" src="" loop></audio>
+		</div>
+		<!-- 创建天气组件总容器 -->
+		<div class="weather-wrap">
+			<!-- 上 -->
+			<div class="info clearfix">
+				<div class="pull-left">
+					<p>
+						<!-- 温度 -->
+						<span class="temp"></span>
+						<!-- 天气状态 -->
+						<span class="type"></span>
+					</p>
+					<!-- 地区 -->
+					<p class="area"></p>
+				</div>
+				<div class="pull-right">
+					<!-- 天气状态图片 -->
+					<svg class="icon weatherImg" aria-hidden="true">
+						<use xlink:href=""></use>
+					</svg>
+				</div>
+			</div>
+			<!-- 下 -->
+			<ul class="list">
+				<!-- 高温 -->
+				<li class="item">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-gaowen"></use>
+					</svg>
+					<p id="gaowen"></p>
+				</li>
+				<!-- 低温 -->
+				<li class="item">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-diwen"></use>
+					</svg>
+					<p id="diwen"></p>
+				</li>
+				<!-- 感温 -->
+				<li class="item">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-ganwentanceqi"></use>
+					</svg>
+					<p id="ganwen"></p>
+				</li>
+				<!-- 湿度 -->
+				<li class="item">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-shidu"></use>
+					</svg>
+					<p id="shidu"></p>
+				</li>
+				<!-- 风向 -->
+				<li class="item">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-fengxiang"></use>
+					</svg>
+					<p id="fengxiang"></p>
+				</li>
+				<!-- 风力 -->
+				<li class="item">
+					<svg class="icon" aria-hidden="true">
+						<use xlink:href="#icon-fengli"></use>
+					</svg>
+					<p id="fengli"></p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
